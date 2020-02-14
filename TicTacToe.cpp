@@ -13,10 +13,22 @@ void CreateBoard(char Board[3][3])
   }
 }
 
+void DisplayBoard(char Board[3][3]){
+  for (int i = 0; i <= 2; i++)
+  {
+    std::string row= "";
+    for (int j = 0; j <= 2; j++)
+    {
+      row = row + Board[i][j] + " ";
+    }
+    std::cout<<row<<std::endl;
+  }
+}
+
 int main()
 {
   char Board[3][3];
   CreateBoard(Board);
+  DisplayBoard(Board);
   return 0;
 }
-
