@@ -1,0 +1,66 @@
+_ _ _
+_ _ _
+_ _ _
+It is player X's turn.
+ - Input Row Value: 1
+ - Input Col Value: 1
+
+X _ _
+_ _ _
+_ _ _
+It is player O's turn.
+ - Input Row Value: 1
+ - Input Col Value: 2
+
+X O _
+_ _ _
+_ _ _
+It is player X's turn.
+ - Input Row Value: 2
+ - Input Col Value: 2
+
+X O _
+_ X _
+_ _ _
+It is player O's turn.
+ - Input Row Value: 1
+ - Input Col Value: 3
+
+X O O
+_ X _
+_ _ _
+It is player X's turn.
+ - Input Row Value: 3
+ - Input Col Value: 3
+
+X O O
+_ X _
+_ _ X
+It is player O's turn.
+ - Input Row Value: 2
+ - Input Col Value: 1
+
+X O O
+O X _
+_ _ X
+It is player X's turn.
+ - Input Row Value: 2
+ - Input Col Value: 3
+
+X O O
+O X X
+_ _ X
+It is player O's turn.
+ - Input Row Value: 3
+ - Input Col Value: 1
+
+X O O
+O X X
+O _ X
+It is player X's turn.
+ - Input Row Value: 3
+ - Input Col Value: 2
+
+X O O
+O X X
+O X X
