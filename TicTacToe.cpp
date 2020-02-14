@@ -13,10 +13,20 @@ void CreateBoard(char Board[3][3])
   }
 }
 
+// Display Board Function:
+void DisplayBoard(char Board[3][3])
+{
+  for(int i = 0; i <= 3-1; i++)
+  {
+    std::cout << Board[i][0] << "-" << Board[i][1] << "-" << Board[i][2] << std::endl;
+  }
+}
+
 int main()
 {
   char Board[3][3];
   CreateBoard(Board);
+  DisplayBoard(Board);
   return 0;
 }
 
