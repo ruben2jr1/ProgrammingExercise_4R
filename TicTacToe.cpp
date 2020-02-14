@@ -1,8 +1,8 @@
+#include <iostream>
 
 // Creates an Empty 3x3 Matrix of Characters either ' ','X', or 'O'.
-char CreateBoard()
+void CreateBoard(char Board[3][3])
 {
-  char Board[3][3];
   // Populate with empty characters:
   for (int i = 0; i <= 2; i++)
   {
@@ -11,5 +11,12 @@ char CreateBoard()
       Board[i][j] = ' ';
     }
   }
-  return Board;
 }
+
+int main()
+{
+  char Board[3][3];
+  CreateBoard(Board);
+  return 0;
+}
+
