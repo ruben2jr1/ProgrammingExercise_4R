@@ -28,9 +28,27 @@ void DisplayBoard(char Board[3][3])
   }
 }
 
+// GetPlayerChoice Implementation:
+void playerChoice(int playerChoice[1][2])
+{
+  int X = 0;
+  int Y = 0;
+  std::cout << " - Input Row Value: ";
+  std::cin >> X;
+  X = X - 1;
+  playerChoice[1][1] = X;
+  std::cout << " - Input Col Value: ";
+  std::cin >> Y;
+  Y = Y - 1;
+  playerChoice[1][2] = Y;
+  std::cout << std::endl;
+}
+
 int main()
 {
   char Board[3][3];
+  int PC[1][2];
+  playerChoice(PC);
   CreateBoard(Board);
   DisplayBoard(Board);
   PlaceMarker(Board,0,1,'X');
