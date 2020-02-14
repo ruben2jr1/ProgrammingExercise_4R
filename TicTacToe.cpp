@@ -13,8 +13,9 @@ void CreateBoard(char Board[3][3])
   }
 }
 
-void PlaceMarker(char (&Board)[3][3], int row, int col, char choice){
-  Board[row][col]=choice;
+//Takes in a refernce the the board, the location of the current move, and the letter to place there.
+void PlaceMarker(char (&Board)[3][3], int arr[], char choice){
+  Board[arr[0]][arr[1]]=choice;
 
 }
 
@@ -29,29 +30,39 @@ void DisplayBoard(char Board[3][3])
 }
 
 // GetPlayerChoice Implementation:
-void playerChoice(int playerChoice[1][2])
+void playerChoice(int playerChoice[2])
 {
   int X = 0;
   int Y = 0;
   std::cout << " - Input Row Value: ";
   std::cin >> X;
   X = X - 1;
-  playerChoice[1][1] = X;
+  playerChoice[0] = X;
   std::cout << " - Input Col Value: ";
   std::cin >> Y;
   Y = Y - 1;
-  playerChoice[1][2] = Y;
+  playerChoice[1] = Y;
   std::cout << std::endl;
 }
 
 int main()
 {
   char Board[3][3];
-  int PC[1][2];
-  playerChoice(PC);
   CreateBoard(Board);
-  DisplayBoard(Board);
-  PlaceMarker(Board,0,1,'X');
+  int PC[2]; //This array stores the row PC[0] and the column PC[1]
+  char Player ='X';
+  for(int i=0; i<9; i++){
+    DisplayBoard(Board);
+    std::cout<<"It is player "<<Player<<"'s turn."<<std::endl;
+    playerChoice(PC);
+    PlaceMarker(Board,PC,Player);
+    if(Player=='X'){
+      Player='O';
+    }
+    else{
+      Player='X';
+    }
+  }
   DisplayBoard(Board);
   return 0;
 }
