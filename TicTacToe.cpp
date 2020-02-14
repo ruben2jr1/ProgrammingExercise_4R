@@ -8,17 +8,23 @@ void CreateBoard(char Board[3][3])
   {
     for (int j = 0; j <= 2; j++)
     {
-      Board[i][j] = ' ';
+      Board[i][j] = '_';
     }
   }
 }
+
+void PlaceMarker(char (&Board)[3][3], int row, int col, char choice){
+  Board[row][col]=choice;
+
+}
+
 
 // Display Board Function:
 void DisplayBoard(char Board[3][3])
 {
   for(int i = 0; i <= 3-1; i++)
   {
-    std::cout << Board[i][0] << "-" << Board[i][1] << "-" << Board[i][2] << std::endl;
+    std::cout << Board[i][0] << " " << Board[i][1] << " " << Board[i][2] << std::endl;
   }
 }
 
@@ -44,6 +50,8 @@ int main()
   int PC[1][2];
   playerChoice(PC);
   CreateBoard(Board);
+  DisplayBoard(Board);
+  PlaceMarker(Board,0,1,'X');
   DisplayBoard(Board);
   return 0;
 }
